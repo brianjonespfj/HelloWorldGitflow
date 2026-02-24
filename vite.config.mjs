@@ -2,7 +2,7 @@ import { defineConfig } from 'vite';
 import path from 'path';
 import react from '@vitejs/plugin-react';
 import tailwindcss from '@tailwindcss/vite';
-import pkg from './package.json' assert { type: 'json' };
+import pkg from './package.json' with { type: 'json' };
 
 export default defineConfig({
   plugins: [
@@ -19,4 +19,3 @@ export default defineConfig({
     'import.meta.env.PACKAGE_VERSION': JSON.stringify(pkg.version),
   },
 });
-
